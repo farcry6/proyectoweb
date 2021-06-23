@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css'>
+  <link rel="stylesheet" href="{% static 'css/cabecera.css' %}" type="text/css" media="screen">
+  <link rel="stylesheet" href="{% static 'css/base.css' %}" type="text/css" media="screen">
+  <link rel="stylesheet" href="{% static 'css/footer.css' %}" type="text/css" media="screen">
+  <title>Mis anuncios</title>
+</head>
+<body>
+  <!-- AQUI VA LA CABECERA -->
+  {% include 'anuncios/cabecera.html' %}
+  <!-- FIN CABECERA -->
+  <!-- A PARTIR DE AQUI EL CONTENIDO DE LOS ANUNCIOS -->
+  <div id="contenedor">
+    <div id="content">
+      <h1>Quien somos</h1>
+      {% block content %}
+      <div  class="anuncio">
+        {% for anuncio in anuncios %}
+        <div class="individual">
+          <h2>{{ anuncio.titulo }}</h2>
+          <p>
+            <img src="{{ anuncio.imagen.url }}"  alt="{{anuncio.titulo}}">
+            <span class="datos">{{ anuncio.created }} || {{ anuncio.autor }}</span>
+            {{ anuncio.texto| truncatewords:90|linebreaks }}
+          </p>
+          <p>LEER MÁS...</p>
+        </div>
+        {% endfor %}
+      </div>
+      {% endblock %}
+    </div>
+  </div>
+  <!-- FIN CONTENIDO -->
+  <!-- AQUI EMPIEZA EL PIE DE PAGINA -->
+    {% include 'anuncios/footer.html' %}
+  <!-- AQUI TERMINA EL FOOTER -->
+</body>
+</html>

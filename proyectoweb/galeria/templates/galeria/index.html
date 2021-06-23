@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="utf-8">
+        <title>Mini Lightbox</title>
+        <meta name="description" content="Prosty lightbox do wyswietlania zdjec w wiekszym rozmiarze, bez uzycia jQuery, bardzo lekki">
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/lightbox.min.css">
+    </head>
+    <body>
+        <header>
+            <h1>
+                Mini Lightbox
+            </h1>
+        </header>
+        <main>
+            <section>
+                <h2>
+                    Galeria
+                </h2>
+                <ul>
+                    <li>
+                        <a class="link-photo" data-lightbox="img" href="img/bathtub.jpg" title="Powieksz zdjecie">
+                            <img src="img/bathtubTH.jpg" alt="demo">
+                        </a>
+                    </li>
+                    <li>
+                        <a class="link-photo" data-lightbox="img" href="img/the-bath.jpg" title="Powieksz zdjecie">
+                            <img src="img/the-bathTH.jpg" alt="demo">
+                        </a>
+                    </li>
+                    <li>
+                        <a class="link-photo" data-lightbox="img" href="img/children.jpg" title="Powieksz zdjecie">
+                            <img src="img/childrenTH.jpg" alt="demo">
+                        </a>
+                    </li>
+                    <li>
+                        <a class="link-photo" data-lightbox="img" href="img/asia.jpg" title="Powieksz zdjecie">
+                            <img src="img/asiaTH.jpg" alt="demo">
+                        </a>
+                    </li>
+                </ul>
+            </section>
+        </main>
+        <footer>
+            <span>
+                Copyright &copy; Kamil Kondratowicz
+            </span>
+        </footer>
+        <script src="js/lightbox.min.js"></script>
+        <script>
+            const lb = lightbox();
+        </script>
+    </body>
+</html>
