@@ -18,7 +18,7 @@
   <!-- A PARTIR DE AQUI EL CONTENIDO DE LOS ANUNCIOS -->
   <div id="contenedor">
     <div id="content">
-      <h1>Quien somos</h1>
+      <h1>Manolo</h1>
       {% block content %}
       <div  class="anuncio">
         {% for anuncio in anuncios %}
@@ -29,7 +29,7 @@
             <span class="datos">{{ anuncio.created }} || {{ anuncio.autor }}</span>
             {{ anuncio.texto| truncatewords:90|linebreaks }}
           </p>
-          <p>LEER MÁS...</p>
+          <p>Seguir ...</p>
         </div>
         {% endfor %}
       </div>

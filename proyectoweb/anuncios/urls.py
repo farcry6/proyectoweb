@@ -8,7 +8,7 @@ from django.urls import path
 urlpatterns = [
     path('home/', views.home, name='home'),
     #path('', views.hora_actual, name='hora_actual'),
-    path('anuncios/', views.anuncio_list, name='anuncios_list'),
+    path('', views.anuncio_list, name='anuncios_list'),
     path('anuncios/profiles', views.precio, name='precio'),
     path('anuncios/contacto', views.contacto, name='contacto'),
  path('anuncios/diseño', views.contacto, name='diseño'),

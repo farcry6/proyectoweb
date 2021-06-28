@@ -14,8 +14,6 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from pagina import views
-from orla import views
 from django.conf.urls import url
 
 
@@ -31,7 +29,6 @@ urlpatterns = [
     path('',include('anuncios.urls')),
 
     path('',include('sendmail.urls')),
-    path('orlas/', views.orla_list, name='orlas'),
 
 
  

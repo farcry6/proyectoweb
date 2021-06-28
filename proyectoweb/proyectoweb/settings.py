@@ -41,7 +41,6 @@ INSTALLED_APPS = [
     'sendmail.apps.SendmailConfig',
     'galeria',
     'pagina',
-    'orla',
     
 ]
 
